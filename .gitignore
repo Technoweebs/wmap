@@ -1,3 +1,7 @@
 node_modules
 yarn.lock
 package-lock.json
+
+#Ignore IDE specific files
+.idea/
+/.idea/

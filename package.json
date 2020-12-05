@@ -1,10 +1,19 @@
 {
-  "name": "wmap",
-  "version": "1.0.0",
-  "description": "wmap is a rework of nmap, for web browsers !",
-  "main": "app.js",
-  "repository": "https://github.com/Technoweebs/wmap",
-  "author": "Technoweebs",
-  "license": "GPL-3.0",
-  "private": false
+	"name": "wmap",
+	"version": "1.0.0",
+	"description": "wmap is a rework of nmap, for web browsers !",
+	"scripts": {
+		"build": "webpack"
+	},
+	"main": "app.ts",
+	"repository": "https://github.com/Technoweebs/wmap",
+	"author": "Technoweebs",
+	"license": "GPL-3.0",
+	"private": false,
+	"devDependencies": {
+		"ts-loader": "^8.0.11",
+		"typescript": "^4.1.2",
+		"webpack": "^5.10.0",
+		"webpack-cli": "^4.2.0"
+	}
 }

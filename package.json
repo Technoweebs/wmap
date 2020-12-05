@@ -1,0 +1,10 @@
+{
+  "name": "wmap",
+  "version": "1.0.0",
+  "description": "wmap is a rework of nmap, for web browsers !",
+  "main": "app.js",
+  "repository": "https://github.com/Technoweebs/wmap",
+  "author": "Technoweebs",
+  "license": "GPL-3.0",
+  "private": false
+}

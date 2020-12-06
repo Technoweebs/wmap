@@ -35,7 +35,7 @@ export default class wmap {
 
 				this[plugin.name] = (options) => {
 					let result = oldFunction.apply(this, options);
-					plugin.exec(result);
+					plugin.exec(options, result);
 					return result;
 				}
 			break;

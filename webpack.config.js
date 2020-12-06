@@ -1,21 +1,27 @@
+const minifyJS = require("terser-webpack-plugin");
+const webpack = require("webpack");
 const path = require("path");
 
 module.exports = {
-	entry: "./app.ts",
-	module: {
-		rules: [
-			{
-				test: /\.tsx?$/,
-				use: "ts-loader",
-				exclude: /node_modules/,
-			},
-		],
-	},
-	resolve: {
-		extensions: [ ".tsx", ".ts", ".js" ],
+	entry: {
+		"wmap": "./app.js",
+		"wmap.min": "./app.js"
 	},
 	output: {
-		filename: "wmap.js",
-		path: path.resolve(__dirname, "dist"),
+		path: path.resolve(__dirname, "./dist"),
+		filename: "[name].js"
 	},
-};
+	module: {
+		rules: [{
+			test: /\.js$/,
+			exclude: /node_modules/,
+			loader: "babel-loader"
+		}]
+	},
+	optimization: {
+		minimize: true,
+		minimizer: [new minifyJS({
+			test: /\.min\.js$/i,
+		})]
+	},
+}

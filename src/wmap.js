@@ -1,17 +1,12 @@
 export default class wmap {
-	constructor(options = {
-		plugins: []
-	}) {
+	constructor(options = {	plugins: []	}) {
 		options.plugins.forEach((plugin) => {
 			this.register(plugin);
 		});
 	}
 	
-	scan(options = {
-		
-	}) {
-		console.log("Boom scan")
-		return ["192.168.0.12", "192.168.0.15"]
+	scan(options = {}) {
+		return [];
 	}
 	
 	register(plugin) {
